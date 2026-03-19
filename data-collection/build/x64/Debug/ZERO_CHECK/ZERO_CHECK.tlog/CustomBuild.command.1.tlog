@@ -1,0 +1,10 @@
+^C:\USERS\NATES\ONEDRIVE\DOCUMENTS\EECS568\IMU-DEAD-RECKONING\DATA-COLLECTION\BUILD\CMAKEFILES\FBA1FB866729B3EBE5CC316090B66060\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/data-collection -BC:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/data-collection/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/data-collection/build/IMUBLE.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ResolveNugetPackages>false</ResolveNugetPackages>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6A2A103F-FCE2-30DA-8142-E28969B3495C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\data-collection\lib\simpleble\simpleble\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/data-collection/lib/simpleble/simpleble/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/data-collection -BC:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/data-collection/build --check-stamp-file C:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/data-collection/build/lib/simpleble/simpleble/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\GenerateExportHeader.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\exportheader.cmake.in;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\data-collection\lib\simpleble\VERSION;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\data-collection\lib\simpleble\cmake\epilogue.cmake;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\data-collection\lib\simpleble\cmake\parse_version.cmake;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\data-collection\lib\simpleble\cmake\prelude.cmake;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\data-collection\lib\simpleble\simpleble\cmake\simpleble.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\data-collection\build\lib\simpleble\simpleble\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/data-collection/lib/simpleble/simpleble/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/data-collection -BC:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/data-collection/build --check-stamp-file C:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/data-collection/build/lib/simpleble/simpleble/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\GenerateExportHeader.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\exportheader.cmake.in;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\data-collection\lib\simpleble\VERSION;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\data-collection\lib\simpleble\cmake\epilogue.cmake;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\data-collection\lib\simpleble\cmake\parse_version.cmake;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\data-collection\lib\simpleble\cmake\prelude.cmake;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\data-collection\lib\simpleble\simpleble\cmake\simpleble.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\data-collection\build\lib\simpleble\simpleble\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/data-collection/lib/simpleble/simpleble/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/data-collection -BC:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/data-collection/build --check-stamp-file C:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/data-collection/build/lib/simpleble/simpleble/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\GenerateExportHeader.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\exportheader.cmake.in;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\data-collection\lib\simpleble\VERSION;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\data-collection\lib\simpleble\cmake\epilogue.cmake;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\data-collection\lib\simpleble\cmake\parse_version.cmake;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\data-collection\lib\simpleble\cmake\prelude.cmake;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\data-collection\lib\simpleble\simpleble\cmake\simpleble.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\data-collection\build\lib\simpleble\simpleble\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/data-collection/lib/simpleble/simpleble/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/data-collection -BC:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/data-collection/build --check-stamp-file C:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/data-collection/build/lib/simpleble/simpleble/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\GenerateExportHeader.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\exportheader.cmake.in;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\data-collection\lib\simpleble\VERSION;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\data-collection\lib\simpleble\cmake\epilogue.cmake;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\data-collection\lib\simpleble\cmake\parse_version.cmake;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\data-collection\lib\simpleble\cmake\prelude.cmake;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\data-collection\lib\simpleble\simpleble\cmake\simpleble.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\data-collection\build\lib\simpleble\simpleble\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\data-collection\build\ZERO_CHECK.vcxproj">
+      <Project>{B877B13B-98EF-3AE7-A7B4-66D81E280F01}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\data-collection\build\lib\simpleble\simpleble\simpleble.vcxproj">
+      <Project>{8424898C-0ED0-381E-949B-91575F60A5AB}</Project>
+      <Name>simpleble</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\data-collection\build\lib\simpleble\simpleble\simpleble-c.vcxproj">
+      <Project>{371FB9D6-E523-3CC9-8A50-FDB504FE8959}</Project>
+      <Name>simpleble-c</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
