@@ -20,10 +20,12 @@
 #pragma pack(push, 1) // make sure there is no padding in the struct for ble
 struct IMUPacket {
   uint32_t timestamp;
-  float q0;
-  float q1;
-  float q2;
-  float q3;
+  float gyro_x;
+  float gyro_y;
+  float gyro_z;
+  float mag_x;
+  float mag_y;
+  float mag_z;
   float accel_x;
   float accel_y;
   float accel_z;
@@ -36,16 +38,15 @@ SimpleBLE::Adapter adapter;
 std::ofstream imu_log("../data/imu_data.csv");
 
 void onReadNotification(SimpleBLE::ByteArray data){
-    std::cout << "received data" << "\n";
+    // std::cout << "received data" << "\n";
     // this function is called every time we get a RX notification
     IMUPacket imu_packet;
 
     std::memcpy(&imu_packet, data.data(), sizeof(IMUPacket));
 
-    imu_log << imu_packet.timestamp << "," << imu_packet.q0 << "," << imu_packet.q1 << "," 
-            << imu_packet.q2 << "," << imu_packet.q3 << "," 
-            << imu_packet.accel_x << "," << imu_packet.accel_y << "," 
-            << imu_packet.accel_z << "\n";
+    imu_log << imu_packet.timestamp << "," << imu_packet.gyro_x << "," << imu_packet.gyro_y << "," << imu_packet.gyro_z << ","
+            << imu_packet.mag_x << "," << imu_packet.mag_y << "," << imu_packet.mag_z << ","
+            << imu_packet.accel_x << "," << imu_packet.accel_y << "," << imu_packet.accel_z << "\n";
 
     // imu_queue.push_back(imu_packet);
 
@@ -112,7 +113,7 @@ int main(){
         return EXIT_FAILURE;
     }
 
-    imu_log << "timestamp,q0,q1,q2,q3,accel_x,accel_y,accel_z\n";
+    imu_log << "timestamp,gyro_x,gyro_y,gyro_z,mag_x,mag_y,mag_z,accel_x,accel_y,accel_z\n";
     auto adapters = SimpleBLE::Adapter::get_adapters();
 
     if (adapters.empty()) {

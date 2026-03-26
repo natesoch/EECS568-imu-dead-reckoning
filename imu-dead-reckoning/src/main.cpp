@@ -63,16 +63,27 @@ void initIMU(){
   success &= (myICM.initializeDMP() == ICM_20948_Stat_Ok);
 
   //
-  success &= (myICM.enableDMPSensor(INV_ICM20948_SENSOR_MAGNETIC_FIELD_UNCALIBRATED) == ICM_20948_Stat_Ok);
+  // success &= (myICM.enableDMPSensor(INV_ICM20948_SENSOR_MAGNETIC_FIELD_UNCALIBRATED) == ICM_20948_Stat_Ok);
 
-  success &= (myICM.enableDMPSensor(INV_ICM20948_SENSOR_LINEAR_ACCELERATION) == ICM_20948_Stat_Ok);
+  // success &= (myICM.enableDMPSensor(INV_ICM20948_SENSOR_LINEAR_ACCELERATION) == ICM_20948_Stat_Ok);
 
   // Enable the DMP orientation sensor
   // success &= (myICM.enableDMPSensor(INV_ICM20948_SENSOR_ORIENTATION) == ICM_20948_Stat_Ok);
-  success &= (myICM.enableDMPSensor(INV_ICM20948_SENSOR_ROTATION_VECTOR) == ICM_20948_Stat_Ok);
+  // success &= (myICM.enableDMPSensor(INV_ICM20948_SENSOR_ROTATION_VECTOR) == ICM_20948_Stat_Ok);
+
+  /////
+
+  success &= (myICM.enableDMPSensor(INV_ICM20948_SENSOR_ACCELEROMETER) == ICM_20948_Stat_Ok);
+  success &= (myICM.enableDMPSensor(INV_ICM20948_SENSOR_GYROSCOPE) == ICM_20948_Stat_Ok);
+  success &= (myICM.enableDMPSensor(INV_ICM20948_SENSOR_MAGNETIC_FIELD_UNCALIBRATED) == ICM_20948_Stat_Ok);
+
+  /////
 
   // E.g. For a 5Hz ODR rate when DMP is running at 55Hz, value = (55/5) - 1 = 10.
-  success &= (myICM.setDMPODRrate(DMP_ODR_Reg_Quat9, 0) == ICM_20948_Stat_Ok); // Set to the maximum
+  // success &= (myICM.setDMPODRrate(DMP_ODR_Reg_Quat9, 0) == ICM_20948_Stat_Ok); // Set to the maximum
+  success &= (myICM.setDMPODRrate(DMP_ODR_Reg_Accel, 0) == ICM_20948_Stat_Ok);
+  success &= (myICM.setDMPODRrate(DMP_ODR_Reg_Gyro, 0) == ICM_20948_Stat_Ok);
+  success &= (myICM.setDMPODRrate(DMP_ODR_Reg_Cpass, 0) == ICM_20948_Stat_Ok);
   // Enable the FIFO
   success &= (myICM.enableFIFO() == ICM_20948_Stat_Ok);
   // Enable the DMP
@@ -178,66 +189,99 @@ void loop() {
       }
     }
 
-    if ((data.header & DMP_header_bitmap_Accel) > 0 && (data.header & DMP_header_bitmap_Quat9) > 0) {
+    static float mag_x = 0;
+    static float mag_y = 0;
+    static float mag_z = 0;
+    if ((data.header & DMP_header_bitmap_Compass) > 0) {
+        mag_x = (float)data.Compass.Data.X * 0.15f; 
+        mag_y = (float)data.Compass.Data.Y * 0.15f;
+        mag_z = (float)data.Compass.Data.Z * 0.15f;
+    }
+
+    if ((data.header & DMP_header_bitmap_Accel) > 0 && (data.header & DMP_header_bitmap_Gyro) > 0){
       
-      float q1 = (float)data.Quat9.Data.Q1 / 1073741824.0f; // divide by 2^30 to get the actual quaternion value
-      float q2 = (float)data.Quat9.Data.Q2 / 1073741824.0f;
-      float q3 = (float)data.Quat9.Data.Q3 / 1073741824.0f;
-      // w0 component?
-      float q0 = sqrt(1.0f - ((q1 * q1) + (q2 * q2) + (q3 * q3)));
+      // float q1 = (float)data.Quat9.Data.Q1 / 1073741824.0f; // divide by 2^30 to get the actual quaternion value
+      // float q2 = (float)data.Quat9.Data.Q2 / 1073741824.0f;
+      // float q3 = (float)data.Quat9.Data.Q3 / 1073741824.0f;
+      // // w0 component?)
+      // float q0 = sqrt(1.0f - ((q1 * q1) + (q2 * q2) + (q3 * q3)));
 
       // Grab Linear Acceleration
 
       // should DMP remove gravity?
-      float accel_x = (float)data.Raw_Accel.Data.X/ 8192.0f; //convert to g's
-      float accel_y = (float)data.Raw_Accel.Data.Y/ 8192.0f;
-      float accel_z = (float)data.Raw_Accel.Data.Z/ 8192.0f;
+      float accel_x = ((float)data.Raw_Accel.Data.X/ 8192.0f) * 9.81f; //convert to g's
+      float accel_y = ((float)data.Raw_Accel.Data.Y/ 8192.0f) * 9.81f;
+      float accel_z = ((float)data.Raw_Accel.Data.Z/ 8192.0f) * 9.81f;
 
       // get gravity vector from DMP and subtract from accel
-      float gravity_x = 2.0f * (q1 * q3 - q0 * q2);
-      float gravity_y = 2.0f * (q0 * q1 + q2 * q3);
-      float gravity_z = (q0 * q0) - (q1 * q1) - (q2 * q2) + (q3 * q3);
+      // float gravity_x = 2.0f * (q1 * q3 - q0 * q2);
+      // float gravity_y = 2.0f * (q0 * q1 + q2 * q3);
+      // float gravity_z = (q0 * q0) - (q1 * q1) - (q2 * q2) + (q3 * q3);
 
       if(samples_counter < CALIBRATION_SAMPLES){
-        z_accel_counter += ((accel_z - gravity_z) * 9.81f);
+        // z_accel_counter += ((accel_z - gravity_z) * 9.81f);
+        z_accel_counter += accel_z;
         samples_counter++;
         return;
       }
       else if (samples_counter == CALIBRATION_SAMPLES){
-        z_accel_offset = z_accel_counter / CALIBRATION_SAMPLES; // only do z for now, since others seem fine
+        z_accel_offset = (z_accel_counter / CALIBRATION_SAMPLES) - 9.81f; // only do z for now, since others seem fine
         x_accel_offset = 0;
         y_accel_offset = 0;
         samples_counter++;
       }
 
       // subtract, convert to m/s^2
-      float lin_accel_x = ((accel_x - gravity_x) * 9.81f) - x_accel_offset;
-      float lin_accel_y = ((accel_y - gravity_y) * 9.81f) - y_accel_offset;
-      float lin_accel_z = ((accel_z - gravity_z) * 9.81f) - z_accel_offset;
+      // float lin_accel_x = ((accel_x - gravity_x) * 9.81f) - x_accel_offset;
+      // float lin_accel_y = ((accel_y - gravity_y) * 9.81f) - y_accel_offset;
+      // float lin_accel_z = ((accel_z - gravity_z) * 9.81f) - z_accel_offset;
 
-      IMUPacket IMU_data = {timestamp, q0, q1, q2, q3, lin_accel_x, lin_accel_y, lin_accel_z};
+      float lin_accel_x = (accel_x ) - x_accel_offset;
+      float lin_accel_y = (accel_y ) - y_accel_offset;
+      float lin_accel_z = (accel_z ) - z_accel_offset;
+
+      float gyro_x = ((float)data.Raw_Gyro.Data.X / 16.384f) * (PI / 180.0f); //convert to dps
+      float gyro_y = ((float)data.Raw_Gyro.Data.Y / 16.384f) * (PI / 180.0f);
+      float gyro_z = ((float)data.Raw_Gyro.Data.Z / 16.384f) * (PI / 180.0f);
+
+      IMUPacket IMU_data = {timestamp, gyro_x, gyro_y, gyro_z, mag_x, mag_y, mag_z, lin_accel_x, lin_accel_y, lin_accel_z};
+
+      // IMUPacket IMU_data = {timestamp, q0, q1, q2, q3, lin_accel_x, lin_accel_y, lin_accel_z};
 
       bool sent = sendIMU(IMU_data);
-      if(sent){
-        Serial.println("Sent IMU data over BLE");
-      }
-      else{
-        Serial.println("Failed to send IMU data over BLE");
-      }
+      // if(sent){
+      //   Serial.println("Sent IMU data over BLE");
+      // }
+      // else{
+      //   Serial.println("Failed to send IMU data over BLE");
+      // }
 
-      Serial.print("Time: "); 
-      Serial.print(timestamp);
-      Serial.print("\tQuat: "); 
-      Serial.print(q0, 4); Serial.print(", "); 
-      Serial.print(q1, 4); Serial.print(", "); 
-      Serial.print(q2, 4); Serial.print(", "); 
-      Serial.print(q3, 4);
-      Serial.print("\tAccel: "); 
-      Serial.print(lin_accel_x); Serial.print(", "); 
-      Serial.print(lin_accel_y); Serial.print(", "); 
-      Serial.print(lin_accel_z);
+      // // Serial.print("Time: "); 
+      // Serial.print(timestamp);
+      // Serial.print("\tGyro: ");
+      // Serial.print("X: ");
+      // Serial.print(gyro_x); 
+      // Serial.print(", ");
+      // Serial.print("Y: ");
+      // Serial.print(gyro_y); 
+      // Serial.print(", ");
+      // Serial.print("Z: ");
+      // Serial.print(gyro_z);
+      // Serial.print("\tMag: ");
+      // Serial.print("X: ");
+      // Serial.print(mag_x); 
+      // Serial.print(", ");
+      // Serial.print("Y: ");
+      // Serial.print(mag_y); 
+      // Serial.print(", ");
+      // Serial.print("Z: ");
+      // Serial.print(mag_z);
+      // Serial.print("\tAccel: "); 
+      // Serial.print(lin_accel_x); Serial.print(", "); 
+      // Serial.print(lin_accel_y); Serial.print(", "); 
+      // Serial.print(lin_accel_z);
 
-      Serial.println();
+      // Serial.println();
     }
   }
   if (myICM.status != ICM_20948_Stat_FIFOMoreDataAvail) {

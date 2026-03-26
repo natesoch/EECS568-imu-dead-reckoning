@@ -23,10 +23,16 @@ struct biasStore
 
 struct __attribute__((packed)) IMUPacket { //no padding for ble
   uint32_t timestamp;
-  float q0;
-  float q1;
-  float q2;
-  float q3;
+  // float q0;
+  // float q1;
+  // float q2;
+  // float q3;
+  float gyro_x;
+  float gyro_y;
+  float gyro_z;
+  float mag_x;
+  float mag_y;
+  float mag_z;
   float accel_x;
   float accel_y;
   float accel_z;
