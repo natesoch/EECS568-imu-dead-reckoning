@@ -1,4 +1,4 @@
-# EECS 568 Final Project - Indoor Localization via IMU Dead Reckoning and ZUPT 
+# EECS 568 Final Project - Indoor Localization via IMU Dead Reckoning with RIEKF and ZUPT 
 
 ## Project Overview
 This project implements an indoor localization system using a foot-mounted 9-DoF IMU (ICM-20948) and an ESP32 microcontroller. The system addresses the  challenge of IMU drift and inaccuracies in an environment when GPS is not avaliable by utilizing an Right Invariant Extended Kalman Filter (RIEKF) and a soft Zero-Velocity Updates (ZUPT) to reconstruct accurate 2D trajectories from raw IMU data.
