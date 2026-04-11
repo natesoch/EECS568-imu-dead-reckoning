@@ -35,7 +35,7 @@ struct IMUPacket {
 std::deque<IMUPacket> imu_queue;
 
 SimpleBLE::Adapter adapter;
-std::ofstream imu_log("../data/imu_data.csv");
+std::ofstream imu_log("../data/imu_data_raw.csv");
 
 void onReadNotification(SimpleBLE::ByteArray data){
     // std::cout << "received data" << "\n";

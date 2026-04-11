@@ -23,12 +23,13 @@ def measurement_Jacobain(g):
 class right_iekf:
     def __init__(self):
         self.Phi = np.eye(3)               
-        self.Q = 1e-4 * np.eye(3)          # gyroscope noise covariance
-        self.N = 1e-4 * np.eye(3)          # accelerometer noise covariance
+        self.Q = 1e-4 * np.eye(3)          # Gyro noise
+        self.N = 1e-4 * np.eye(3)          # Accel noise
+        self.N_mag = 5e-3 * np.eye(3)      # Mag noise (higher so it doesn't fight Accel)
         self.f = motion_model              
         self.H = measurement_Jacobain      
-        self.X = np.eye(3)                 # state vector (Rotation Matrix)
-        self.P = 0.1 * np.eye(3)           # state covariance
+        self.X = np.eye(3)
+        self.P = 0.1 * np.eye(3)
 
     def prediction(self, omega, dt):
         self.X = self.f(self.X, omega, dt)
@@ -36,26 +37,45 @@ class right_iekf:
         self.P = self.P + F @ self.Q @ np.transpose(F)
 
     def correction(self, Y, g):
-            Y_norm = Y / np.linalg.norm(Y)
-            g_norm = g / np.linalg.norm(g)
+        # Accelerometer Correction (Pitch / Roll)
+        Y_norm = Y / np.linalg.norm(Y)
+        g_norm = g / np.linalg.norm(g)
 
-            H = self.H(g_norm) 
-            N = self.N
-            S = H @ self.P @ np.transpose(H) + N
-            L = self.P @ np.transpose(H) @ np.linalg.inv(S)
+        H = self.H(g_norm) 
+        S = H @ self.P @ np.transpose(H) + self.N
+        L = self.P @ np.transpose(H) @ np.linalg.inv(S)
 
-            r = self.X @ Y_norm - g_norm 
-            self.X = expm(wedge(L @ r)) @ self.X
-            self.P = (self.Phi - L @ H) @ self.P
+        r = self.X @ Y_norm - g_norm 
+        self.X = expm(wedge(L @ r)) @ self.X
+        self.P = (self.Phi - L @ H) @ self.P
 
+    def correction_mag(self, Y_mag, mag_ref):
+        # Magnetometer Correction (Yaw)
+        Y_norm = Y_mag / np.linalg.norm(Y_mag)
+        ref_norm = mag_ref / np.linalg.norm(mag_ref)
+
+        H = self.H(ref_norm) 
+        S = H @ self.P @ np.transpose(H) + self.N_mag
+        L = self.P @ np.transpose(H) @ np.linalg.inv(S)
+
+        r = self.X @ Y_norm - ref_norm 
+        self.X = expm(wedge(L @ r)) @ self.X
+        self.P = (self.Phi - L @ H) @ self.P
+        
 print("Loading IMU data...")
-df = pd.read_csv('data/imu_data.csv')
+df = pd.read_csv('data/imu_data_foot_raw.csv')
 
 t = df['timestamp'].values / 1000000.0 # convert microseconds to seconds
 
 # Extract sensor data (N x 3 arrays)
 gyro = np.column_stack((df['gyro_x'], df['gyro_y'], df['gyro_z']))
 accel = np.column_stack((df['accel_x'], df['accel_y'], df['accel_z']))
+
+# Extract magnetometer data
+mag = np.column_stack((df['mag_x'], df['mag_y'], df['mag_z']))
+
+# Find your local magnetic North vector by averaging the first 50 stationary samples
+mag_ref = np.mean(mag[:50], axis=0)
 
 print("Initializing Filter...")
 ekf = right_iekf()
@@ -90,6 +110,7 @@ for i in range(1, N):
     
     if is_planted or i < WARMUP_SAMPLES:
         ekf.correction(accel[i], gravity_vec)
+        ekf.correction_mag(mag[i], mag_ref)
         
     accel_global = ekf.X @ accel[i]
     accel_linear = accel_global - np.array([0, 0, LOCAL_GRAVITY_MAG])
@@ -123,7 +144,7 @@ plt.xlabel('Global X Position (meters) [Positive = Left]')
 plt.ylabel('Global Y Position (meters) [Positive = Forward]')
 
 plt.axis('equal')    
-plt.gca().invert_xaxis()  
+plt.gca()#.invert_xaxis()  
 
 plt.legend()
 plt.grid(True)

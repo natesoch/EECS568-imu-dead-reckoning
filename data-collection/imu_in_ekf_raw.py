@@ -150,7 +150,7 @@ def ahrs_riekf(iekf_filter, data):
             gyro_norm = np.linalg.norm(omega[i])
             
             # If the foot is planted (acceleration is ~gravity, gyro is ~0)
-            if abs(accel_norm - 9.81) < ACCEL_THRESHOLD and gyro_norm < GYRO_THRESHOLD:
+            if abs(accel_norm - 10.092) < ACCEL_THRESHOLD and gyro_norm < GYRO_THRESHOLD:
                 v = np.zeros(3)  # Reset velocity to 0 to kill drift!
 
         states_rot[i+1] = iekf_filter.X
@@ -195,9 +195,15 @@ if __name__ == "__main__":
         x = positions[:, 0]
         y = positions[:, 1]
         
-        plt.plot(x, y, label='2D Path (Top-Down)', color='darkcyan', linewidth=2)
-        plt.scatter(x[0], y[0], color='green', marker='o', label='Start', s=100)
-        plt.scatter(x[-1], y[-1], color='red', marker='x', label='End', s=100)
+        # smoothing
+        from scipy.signal import savgol_filter
+        window = min(51, len(x) // 2 * 2 + 1) # Ensure odd window size
+        x_smooth = savgol_filter(x, window, 3)  
+        y_smooth = savgol_filter(y, window, 3)
+        
+        plt.plot(x_smooth, y_smooth, label='2D Path (Top-Down)', color='darkcyan', linewidth=2)
+        plt.scatter(x_smooth[0], y_smooth[0], color='green', marker='o', label='Start', s=100)
+        plt.scatter(x_smooth[-1], y_smooth[-1], color='red', marker='x', label='End', s=100)
         
         plt.xlabel('X Position (meters)')
         plt.ylabel('Y Position (meters)')
