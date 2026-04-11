@@ -3,6 +3,9 @@
 ## Project Overview
 This project implements an indoor localization system using a foot-mounted 9-DoF IMU (ICM-20948) and an ESP32 microcontroller. The system addresses the inherent challenge of sensor drift in GPS-denied environments by utilizing an Extended Kalman Filter (EKF) and specialized Zero-Velocity Updates (ZUPT) to reconstruct accurate 2D trajectories from raw inertial data.
 
+### Results
+![Straight Line Trajectory](/img/line_trajectory.png)
+
 ### Data Processing 
 1. **Acquisition:** Raw accelerometer, gyroscope, and magnotometer data are sampled through the ESP32.
 2. **Orientation Estimation:** Sensor data is transformed from the local body frame to a global navigation frame.
