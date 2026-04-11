@@ -33,15 +33,17 @@ To capture the data, we soldered a ESP32 and a 9-DoF IMU onto a proto board, alo
 4. **Kinematic Integration:** Acceleration is integrated to estimate velocity and position.
 
 ### Right Invariant Extended Kalman Filter (RIEKF)
-To manage the quadratic growth of position error due to drift and inaccuracies from the IMU, a Right Invariant Extended Kalman Filter maintains a state vector consisting of position, velocity, orientation, and sensor biases.
+To manage the quadratic growth of position error due to drift and inaccuracies from the IMU, a Right Invariant Extended Kalman Filter maintains a state vector consisting of position, velocity, orientation, and sensor biases. Unlike a standard EKF, the RIEKF leverages the underlying Lie group structure of the system and defines estimation errors in a right-invariant manner, improving consistency and reducing linearization error during state estimation. The state vector is as follows:
 
 $$x = [p, v, q, b_a, b_g]^T$$
+
+Using a RIEKF ultimately gives us better consistency and linearization error, as improved performance for IMU system since it contains lots of rotations.
 
 ### Soft Zero-Velocity Updates (ZUPT)
 We use correction mechanism that relies on the assumption of zero velocity in the time when a user is alternating steps (when their foot is planted on the ground). While ZUPT usually assumes absolute zero velocity, this project implements a Soft ZUPT formulation, meaning velocities close to zero are considered zero.
 
 ## Application
-This system is designed for pedestrian navigation, unlike traditional mobile robots. By treating the human foot as a periodic stationary reference, the soft ZUPT algorithm provides an correction loop that maintains estimator consistency without the need for anything external devices outside the system.
+This system is designed for pedestrian navigation, unlike traditional mobile robots. By treating the human foot as a being periodically stationary (alternative feet when walking), the soft ZUPT algorithm provides an correction loop that maintains estimator consistency without the need for anything external devices outside the system, allowing dor dead reckoning to be accomplished with just the ESP32 + IMU combination.
 
 
 ## Group Members
