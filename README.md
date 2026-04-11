@@ -8,6 +8,8 @@ Below are the reconstructed 2D trajectory graphs after performing dead-reckoning
 
 To capture the data, we soldered a ESP32 and a 9-DoF IMU onto a proto board, along with a 3.3V buck converter to power the device and peripherals. A 3.7V LiPO battery is used to supply power to the system. The system is then securely strapped to a shoe using shoelaces, after which it can connect to a laptop program over BLE and send our raw IMU data.
 
+We notbaly peform a common baseline test for IMU dead reckoning seen in research papers, which consists of mapping out a square/rectangle to see how well the system can reconstruct each 90 degree turn. As seen in our graph below, our system achieves this quite well, accuractly mapping each turn and the distance walked.
+
 ### Walking in a sqaure:
 <p>
   <img src="data-collection/img/square_trajectory.png" width="45%" />
