@@ -10,6 +10,13 @@ To capture the data, we soldered a ESP32 and a 9-DoF IMU onto a proto board, alo
 
 We notably peform a common baseline test for IMU dead reckoning seen in research papers, which consists of mapping out a square/rectangle to see how well the system can reconstruct each 90 degree turn. As seen in our graph below, our system achieves this quite well, accuractly mapping each turn and the distance walked.
 
+### System Setup:
+<p>
+  <img src="data-collection/img/experiment_setup.jpg" width="45%" />
+  <img src="data-collection/img/setup_on_foot.jpg" width="45%" />
+</p>
+
+
 ### Walking in a sqaure:
 <p>
   <img src="data-collection/img/square_trajectory.png" width="45%" />
@@ -44,7 +51,12 @@ Using a RIEKF ultimately gives us better consistency and linearization error, as
 ### Soft Zero-Velocity Updates (ZUPT)
 We use correction mechanism that relies on the assumption of zero velocity in the time when a user is alternating steps (when their foot is planted on the ground). While ZUPT usually assumes absolute zero velocity, this project implements a Soft ZUPT formulation, meaning velocities close to zero are considered zero.
 
-## Application
+### System Design Diagram
+<p>
+  <img src="data-collection/img/system_design.jpg" />
+</p>
+
+### Application
 This system is designed for pedestrian navigation, unlike traditional mobile robots. By treating the human foot as a being periodically stationary (alternative feet when walking), the soft ZUPT algorithm provides an correction loop that maintains estimator consistency without the need for anything external devices outside the system, allowing dor dead reckoning to be accomplished with just the ESP32 + IMU combination.
 
 
