@@ -13,8 +13,8 @@ We notably peform a common baseline test for IMU dead reckoning seen in research
 ### System Setup:
 For the baseline test, we taped out a sqaure on floor and traced it. As seen below, the device is mounted on the shoe, with the battery tucked inside.
 <p>
-  <img src="data-collection/img/experiment_setup.jpg" width="45%" />
-  <img src="data-collection/img/setup_on_foot.jpg" width="45%" />
+  <img src="data-collection/img/experiment_setup.jpg" width="30%" />
+  <img src="data-collection/img/setup_on_foot.jpg" width="37.5%" />
 </p>
 
 
