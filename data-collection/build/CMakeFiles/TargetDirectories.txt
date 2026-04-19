@@ -1,8 +1,0 @@
-C:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/data-collection/build/CMakeFiles/IMUBLE.dir
-C:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/data-collection/build/CMakeFiles/INSTALL.dir
-C:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/data-collection/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/data-collection/build/CMakeFiles/ZERO_CHECK.dir
-C:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/data-collection/build/lib/simpleble/simpleble/CMakeFiles/simpleble.dir
-C:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/data-collection/build/lib/simpleble/simpleble/CMakeFiles/simpleble-c.dir
-C:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/data-collection/build/lib/simpleble/simpleble/CMakeFiles/INSTALL.dir
-C:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/data-collection/build/lib/simpleble/simpleble/CMakeFiles/ALL_BUILD.dir

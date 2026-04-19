@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2AEBBB03-23C5-36C6-8EAB-51BE8BCBC1C6}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <VcpkgEnabled>false</VcpkgEnabled>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>simpleble</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="do_not_import_user.props" Condition="exists('do_not_import_user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\build\lib\simpleble\simpleble\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">simpleble.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">simpleble-debug</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\build\lib\simpleble\simpleble\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">simpleble.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">simpleble</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\build\lib\simpleble\simpleble\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">simpleble.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">simpleble-minsizerel</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\build\lib\simpleble\simpleble\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">simpleble.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">simpleble-relwithdebinfo</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\include;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\builders;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\external;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\common;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\dongl;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\frontends\safe;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\..\dependencies\external;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\..\dependencies\internal\include;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\dongl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/EECS586-imu-dead-reckoning/data-collection/build/lib/simpleble/simpleble/export" /utf-8</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CallingConvention>Cdecl</CallingConvention>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level1</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;SIMPLEBLE_BACKEND_PLAIN=0;SIMPLEBLE_BACKEND_LINUX=0;SIMPLEBLE_BACKEND_WINDOWS=1;SIMPLEBLE_BACKEND_MACOS=0;SIMPLEBLE_BACKEND_IOS=0;SIMPLEBLE_BACKEND_ANDROID=0;SIMPLEBLE_LOG_LEVEL=SIMPLEBLE_LOG_LEVEL_INFO;SIMPLEBLE_VERSION="0.10.4";FMT_HEADER_ONLY;/D_WIN32_WINNT=0x0A00;/D_USE_MATH_DEFINES;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;SIMPLEBLE_BACKEND_PLAIN=0;SIMPLEBLE_BACKEND_LINUX=0;SIMPLEBLE_BACKEND_WINDOWS=1;SIMPLEBLE_BACKEND_MACOS=0;SIMPLEBLE_BACKEND_IOS=0;SIMPLEBLE_BACKEND_ANDROID=0;SIMPLEBLE_LOG_LEVEL=SIMPLEBLE_LOG_LEVEL_INFO;SIMPLEBLE_VERSION=\"0.10.4\";FMT_HEADER_ONLY;/D_WIN32_WINNT=0x0A00;/D_USE_MATH_DEFINES;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\include;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\builders;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\external;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\common;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\dongl;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\frontends\safe;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\..\dependencies\external;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\..\dependencies\internal\include;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\dongl\include;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\build\lib\simpleble\simpleble\export;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\include;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\builders;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\external;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\common;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\dongl;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\frontends\safe;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\..\dependencies\external;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\..\dependencies\internal\include;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\dongl\include;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\build\lib\simpleble\simpleble\export;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\include;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\builders;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\external;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\common;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\dongl;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\frontends\safe;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\..\dependencies\external;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\..\dependencies\internal\include;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\dongl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/EECS586-imu-dead-reckoning/data-collection/build/lib/simpleble/simpleble/export" /utf-8</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <CallingConvention>Cdecl</CallingConvention>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level1</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SIMPLEBLE_BACKEND_PLAIN=0;SIMPLEBLE_BACKEND_LINUX=0;SIMPLEBLE_BACKEND_WINDOWS=1;SIMPLEBLE_BACKEND_MACOS=0;SIMPLEBLE_BACKEND_IOS=0;SIMPLEBLE_BACKEND_ANDROID=0;SIMPLEBLE_LOG_LEVEL=SIMPLEBLE_LOG_LEVEL_INFO;SIMPLEBLE_VERSION="0.10.4";FMT_HEADER_ONLY;/D_WIN32_WINNT=0x0A00;/D_USE_MATH_DEFINES;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SIMPLEBLE_BACKEND_PLAIN=0;SIMPLEBLE_BACKEND_LINUX=0;SIMPLEBLE_BACKEND_WINDOWS=1;SIMPLEBLE_BACKEND_MACOS=0;SIMPLEBLE_BACKEND_IOS=0;SIMPLEBLE_BACKEND_ANDROID=0;SIMPLEBLE_LOG_LEVEL=SIMPLEBLE_LOG_LEVEL_INFO;SIMPLEBLE_VERSION=\"0.10.4\";FMT_HEADER_ONLY;/D_WIN32_WINNT=0x0A00;/D_USE_MATH_DEFINES;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\include;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\builders;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\external;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\common;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\dongl;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\frontends\safe;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\..\dependencies\external;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\..\dependencies\internal\include;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\dongl\include;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\build\lib\simpleble\simpleble\export;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\include;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\builders;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\external;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\common;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\dongl;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\frontends\safe;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\..\dependencies\external;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\..\dependencies\internal\include;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\dongl\include;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\build\lib\simpleble\simpleble\export;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\include;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\builders;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\external;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\common;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\dongl;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\frontends\safe;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\..\dependencies\external;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\..\dependencies\internal\include;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\dongl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/EECS586-imu-dead-reckoning/data-collection/build/lib/simpleble/simpleble/export" /utf-8</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <CallingConvention>Cdecl</CallingConvention>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level1</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SIMPLEBLE_BACKEND_PLAIN=0;SIMPLEBLE_BACKEND_LINUX=0;SIMPLEBLE_BACKEND_WINDOWS=1;SIMPLEBLE_BACKEND_MACOS=0;SIMPLEBLE_BACKEND_IOS=0;SIMPLEBLE_BACKEND_ANDROID=0;SIMPLEBLE_LOG_LEVEL=SIMPLEBLE_LOG_LEVEL_INFO;SIMPLEBLE_VERSION="0.10.4";FMT_HEADER_ONLY;/D_WIN32_WINNT=0x0A00;/D_USE_MATH_DEFINES;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SIMPLEBLE_BACKEND_PLAIN=0;SIMPLEBLE_BACKEND_LINUX=0;SIMPLEBLE_BACKEND_WINDOWS=1;SIMPLEBLE_BACKEND_MACOS=0;SIMPLEBLE_BACKEND_IOS=0;SIMPLEBLE_BACKEND_ANDROID=0;SIMPLEBLE_LOG_LEVEL=SIMPLEBLE_LOG_LEVEL_INFO;SIMPLEBLE_VERSION=\"0.10.4\";FMT_HEADER_ONLY;/D_WIN32_WINNT=0x0A00;/D_USE_MATH_DEFINES;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\include;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\builders;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\external;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\common;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\dongl;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\frontends\safe;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\..\dependencies\external;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\..\dependencies\internal\include;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\dongl\include;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\build\lib\simpleble\simpleble\export;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\include;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\builders;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\external;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\common;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\dongl;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\frontends\safe;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\..\dependencies\external;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\..\dependencies\internal\include;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\dongl\include;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\build\lib\simpleble\simpleble\export;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\include;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\builders;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\external;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\common;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\dongl;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\frontends\safe;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\..\dependencies\external;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\..\dependencies\internal\include;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\dongl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/EECS586-imu-dead-reckoning/data-collection/build/lib/simpleble/simpleble/export" /utf-8</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <CallingConvention>Cdecl</CallingConvention>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level1</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SIMPLEBLE_BACKEND_PLAIN=0;SIMPLEBLE_BACKEND_LINUX=0;SIMPLEBLE_BACKEND_WINDOWS=1;SIMPLEBLE_BACKEND_MACOS=0;SIMPLEBLE_BACKEND_IOS=0;SIMPLEBLE_BACKEND_ANDROID=0;SIMPLEBLE_LOG_LEVEL=SIMPLEBLE_LOG_LEVEL_INFO;SIMPLEBLE_VERSION="0.10.4";FMT_HEADER_ONLY;/D_WIN32_WINNT=0x0A00;/D_USE_MATH_DEFINES;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SIMPLEBLE_BACKEND_PLAIN=0;SIMPLEBLE_BACKEND_LINUX=0;SIMPLEBLE_BACKEND_WINDOWS=1;SIMPLEBLE_BACKEND_MACOS=0;SIMPLEBLE_BACKEND_IOS=0;SIMPLEBLE_BACKEND_ANDROID=0;SIMPLEBLE_LOG_LEVEL=SIMPLEBLE_LOG_LEVEL_INFO;SIMPLEBLE_VERSION=\"0.10.4\";FMT_HEADER_ONLY;/D_WIN32_WINNT=0x0A00;/D_USE_MATH_DEFINES;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\include;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\builders;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\external;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\common;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\dongl;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\frontends\safe;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\..\dependencies\external;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\..\dependencies\internal\include;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\dongl\include;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\build\lib\simpleble\simpleble\export;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\include;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\builders;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\external;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\common;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\dongl;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\frontends\safe;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\..\dependencies\external;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\..\dependencies\internal\include;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\dongl\include;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\build\lib\simpleble\simpleble\export;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/EECS586-imu-dead-reckoning/data-collection/lib/simpleble/simpleble/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/EECS586-imu-dead-reckoning/data-collection -BC:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/EECS586-imu-dead-reckoning/data-collection/build --check-stamp-file C:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/EECS586-imu-dead-reckoning/data-collection/build/lib/simpleble/simpleble/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\GenerateExportHeader.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\exportheader.cmake.in;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\VERSION;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\cmake\epilogue.cmake;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\cmake\parse_version.cmake;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\cmake\prelude.cmake;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\cmake\simpleble.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\build\lib\simpleble\simpleble\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/EECS586-imu-dead-reckoning/data-collection/lib/simpleble/simpleble/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/EECS586-imu-dead-reckoning/data-collection -BC:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/EECS586-imu-dead-reckoning/data-collection/build --check-stamp-file C:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/EECS586-imu-dead-reckoning/data-collection/build/lib/simpleble/simpleble/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\GenerateExportHeader.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\exportheader.cmake.in;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\VERSION;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\cmake\epilogue.cmake;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\cmake\parse_version.cmake;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\cmake\prelude.cmake;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\cmake\simpleble.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\build\lib\simpleble\simpleble\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/EECS586-imu-dead-reckoning/data-collection/lib/simpleble/simpleble/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/EECS586-imu-dead-reckoning/data-collection -BC:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/EECS586-imu-dead-reckoning/data-collection/build --check-stamp-file C:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/EECS586-imu-dead-reckoning/data-collection/build/lib/simpleble/simpleble/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\GenerateExportHeader.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\exportheader.cmake.in;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\VERSION;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\cmake\epilogue.cmake;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\cmake\parse_version.cmake;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\cmake\prelude.cmake;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\cmake\simpleble.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\build\lib\simpleble\simpleble\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/EECS586-imu-dead-reckoning/data-collection/lib/simpleble/simpleble/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/EECS586-imu-dead-reckoning/data-collection -BC:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/EECS586-imu-dead-reckoning/data-collection/build --check-stamp-file C:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/EECS586-imu-dead-reckoning/data-collection/build/lib/simpleble/simpleble/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\GenerateExportHeader.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\exportheader.cmake.in;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\VERSION;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\cmake\epilogue.cmake;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\cmake\parse_version.cmake;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\cmake\prelude.cmake;C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\cmake\simpleble.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\build\lib\simpleble\simpleble\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\frontends\base\Advanced.cpp" />
+    <ClCompile Include="C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\frontends\base\Adapter.cpp" />
+    <ClCompile Include="C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\frontends\base\Peripheral.cpp" />
+    <ClCompile Include="C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\frontends\base\Service.cpp" />
+    <ClCompile Include="C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\frontends\base\Characteristic.cpp" />
+    <ClCompile Include="C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\frontends\base\Descriptor.cpp" />
+    <ClCompile Include="C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\frontends\base\Backend.cpp" />
+    <ClCompile Include="C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\common\AdapterBase.cpp" />
+    <ClCompile Include="C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\common\ServiceBase.cpp" />
+    <ClCompile Include="C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\common\CharacteristicBase.cpp" />
+    <ClCompile Include="C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\common\DescriptorBase.cpp" />
+    <ClCompile Include="C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\dongl\BackendDongl.cpp" />
+    <ClCompile Include="C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\dongl\AdapterDongl.cpp" />
+    <ClCompile Include="C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\dongl\PeripheralDongl.cpp" />
+    <ClCompile Include="C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\Config.cpp" />
+    <ClCompile Include="C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\Exceptions.cpp" />
+    <ClCompile Include="C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\Utils.cpp">
+      <ObjectFileName>$(IntDir)/src/Utils.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\Logging.cpp" />
+    <ClCompile Include="C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\frontends\safe\AdapterSafe.cpp" />
+    <ClCompile Include="C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\frontends\safe\PeripheralSafe.cpp" />
+    <ClCompile Include="C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\windows\AdapterWindows.cpp" />
+    <ClCompile Include="C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\windows\PeripheralWindows.cpp" />
+    <ClCompile Include="C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\windows\BackendWinRT.cpp" />
+    <ClCompile Include="C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\windows\MtaManager.cpp" />
+    <ClCompile Include="C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\windows\Utils.cpp">
+      <ObjectFileName>$(IntDir)/src/backends/windows/Utils.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\dongl\usb\UsbHelper.cpp" />
+    <ClCompile Include="C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\dongl\cmd\Commands.cpp" />
+    <ClCompile Include="C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\dongl\cmd\Events.cpp" />
+    <ClCompile Include="C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\dongl\cmd\Utils.cpp">
+      <ObjectFileName>$(IntDir)/src/backends/dongl/cmd/Utils.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\lib\simpleble\simpleble\src\backends\dongl\usb\UsbHelperWindows.cpp" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\build\ZERO_CHECK.vcxproj">
+      <Project>{78CCC85A-2F2E-3FDC-A5D9-FCBF24021BDC}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

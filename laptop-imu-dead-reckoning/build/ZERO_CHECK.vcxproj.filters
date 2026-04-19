@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\nates\OneDrive\Documents\EECS568\imu-dead-reckoning\EECS586-imu-dead-reckoning\data-collection\build\CMakeFiles\76a6f1eb9bd3e98c5760a74e53539a60\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{CC984E8E-7D3C-3542-83D0-FDB90B1C5CB0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

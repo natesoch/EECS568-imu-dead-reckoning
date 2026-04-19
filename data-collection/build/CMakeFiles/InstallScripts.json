@@ -1,8 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"C:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/data-collection/build/cmake_install.cmake",
-		"C:/Users/nates/OneDrive/Documents/EECS568/imu-dead-reckoning/data-collection/build/lib/simpleble/simpleble/cmake_install.cmake"
-	],
-	"Parallel" : false
-}
