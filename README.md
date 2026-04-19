@@ -13,27 +13,27 @@ We notably peform a common baseline test for IMU dead reckoning seen in research
 ### System Setup:
 For the baseline test, we taped out a sqaure on floor and traced it. As seen below, the device is mounted on the shoe, with the battery tucked inside.
 <p>
-  <img src="data-collection/img/experiment_setup.jpg" width="30%" />
-  <img src="data-collection/img/setup_on_foot.jpg" width="37.5%" />
+  <img src="laptop-imu-dead-reckoning/img/experiment_setup.jpg" width="30%" />
+  <img src="laptop-imu-dead-reckoning/img/setup_on_foot.jpg" width="37.5%" />
 </p>
 
 
 ### Walking in a sqaure:
 <p>
-  <img src="data-collection/img/square_trajectory.png" width="45%" />
-  <img src="data-collection/img/square_trajectory.gif" width="45%" />
+  <img src="laptop-imu-dead-reckoning/img/square_trajectory.png" width="45%" />
+  <img src="laptop-imu-dead-reckoning/img/square_trajectory.gif" width="45%" />
 </p>
 
 ### Walking in a line with a right turn:
 <p>
-  <img src="data-collection/img/line_and_turn_trajectory.png" width="45%" />
-  <img src="data-collection/img/line_and_turn_trajectory.gif" width="45%" />
+  <img src="laptop-imu-dead-reckoning/img/line_and_turn_trajectory.png" width="45%" />
+  <img src="laptop-imu-dead-reckoning/img/line_and_turn_trajectory.gif" width="45%" />
 </p>
 
 ### Walking in a straight line:
 <p>
-  <img src="data-collection/img/line_trajectory.png" width="45%" />
-  <img src="data-collection/img/line_trajectory.gif" width="45%" />
+  <img src="laptop-imu-dead-reckoning/img/line_trajectory.png" width="45%" />
+  <img src="laptop-imu-dead-reckoning/img/line_trajectory.gif" width="45%" />
 </p>
 
 ### Data Processing 
@@ -55,11 +55,14 @@ We use correction mechanism that relies on the assumption of zero velocity in th
 ### System Design Diagram
 Below is the system diagram showing how the ESP32, IMU, and laptop comunication and exchange information.
 <p>
-  <img src="data-collection/img/system_design.jpg" />
+  <img src="laptop-imu-dead-reckoning/img/system_design.jpg" />
 </p>
 
 ### Application
 This system is designed for pedestrian navigation, unlike traditional mobile robots. By treating the human foot as a being periodically stationary (alternative feet when walking), the soft ZUPT algorithm provides an correction loop that maintains estimator consistency without the need for anything external devices outside the system, allowing dor dead reckoning to be accomplished with just the ESP32 + IMU combination.
+
+### Code Organization
+The ESP32 IMU and BLE code can be found in ESP32-imu-dead-reckoning/src/. The laptop side BLE and Dead Reckoning code can be found in laptop-imu-dead-reckoning/src/. The program that performs dead reckoning via RIEKF and ZUPT can be found in imu_inv_ekf.py.
 
 
 ## Group Members
